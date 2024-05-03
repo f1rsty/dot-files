@@ -1,0 +1,5 @@
+working_directory = "C:\\projects"
+
+[shell]
+program = 'pwsh.exe'
+args = ["--nologo"]
