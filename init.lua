@@ -285,15 +285,14 @@ require("lazy").setup({
 
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
+			--
 			require("telescope").setup({
-				-- You can put your default mappings / updates / etc. in here
-				--  All the info you're looking for is in `:help telescope.setup()`
-				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
+				-- override the default "ctrl+v" for split
+				defaults = {
+					mappings = {
+						i = { ["<C-l>"] = "select_vertical" },
+					},
+				},
 				-- pickers = {}
 				extensions = {
 					["ui-select"] = {
@@ -502,6 +501,7 @@ require("lazy").setup({
 					},
 				},
 				gopls = {},
+				powershell_es = {},
 				svelte = {},
 				-- tsserver = {},
 				-- zls = {},
