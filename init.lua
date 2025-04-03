@@ -155,7 +155,7 @@ require("lazy").setup({
 				add = { text = "+" },
 				change = { text = "~" },
 				delete = { text = "_" },
-				topdelete = { text = "ΓÇ╛" },
+				topdelete = { text = "‾" },
 				changedelete = { text = "~" },
 			},
 		},
@@ -193,10 +193,10 @@ require("lazy").setup({
 					Down = "<Down> ",
 					Left = "<Left> ",
 					Right = "<Right> ",
-					C = "<C-ΓÇª> ",
-					M = "<M-ΓÇª> ",
-					D = "<D-ΓÇª> ",
-					S = "<S-ΓÇª> ",
+					C = "<C-…> ",
+					M = "<M-…> ",
+					D = "<D-…> ",
+					S = "<S-…> ",
 					CR = "<CR> ",
 					Esc = "<Esc> ",
 					ScrollWheelDown = "<ScrollWheelDown> ",
@@ -502,16 +502,17 @@ require("lazy").setup({
 					},
 				},
 				gopls = {},
-				zls = {},
+				svelte = {},
+				-- tsserver = {},
+				-- zls = {},
 				-- pyright = {},
-				rust_analyzer = {},
+				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
-				-- tsserver = {},
 				--
 
 				lua_ls = {
@@ -842,19 +843,19 @@ require("lazy").setup({
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
 		icons = vim.g.have_nerd_font and {} or {
-			cmd = "Γîÿ",
-			config = "≡ƒ¢á",
-			event = "≡ƒôà",
-			ft = "≡ƒôé",
-			init = "ΓÜÖ",
-			keys = "≡ƒù¥",
-			plugin = "≡ƒöî",
-			runtime = "≡ƒÆ╗",
-			require = "≡ƒîÖ",
-			source = "≡ƒôä",
-			start = "≡ƒÜÇ",
-			task = "≡ƒôî",
-			lazy = "≡ƒÆñ ",
+			cmd = "⌘",
+			config = "🛠",
+			event = "📅",
+			ft = "📂",
+			init = "⚙",
+			keys = "🗝",
+			plugin = "🔌",
+			runtime = "💻",
+			require = "🌙",
+			source = "📄",
+			start = "🚀",
+			task = "📌",
+			lazy = "💤 ",
 		},
 	},
 })
