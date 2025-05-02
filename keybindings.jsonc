@@ -1,0 +1,54 @@
+[ 
+    {
+      "key": "shift+c",
+      "command": "editor.action.insertCursorBelow",
+      "when": "vim.mode == 'Normal' && editorTextFocus && !inputFocus"
+    }, 
+    {
+      "key": "tab",
+      "command": "selectNextSuggestion",
+      "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
+    },
+    {
+      "key": "shift+tab",
+      "command": "selectPrevSuggestion",
+      "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus",
+    },
+    {
+      "key": "alt+k",
+      "command": "editor.action.moveLinesUpAction"
+    },
+    {
+      "key": "alt+j",
+      "command": "editor.action.moveLinesDownAction"
+    },
+    /*  VSCode attempt to emulate https://github.com/terryma/vim-multiple-cursors */
+
+    // Use built in VSCode pattern matcher for entire word search (ctrl + n)
+    {
+      "key": "ctrl+n",
+      "command": "editor.action.addSelectionToNextFindMatch",
+      "when": "vim.active && editorFocus && vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
+    },
+
+    // Skip current match (ctrl + x)
+    {
+      "key": "ctrl+x",
+      "command": "editor.action.moveSelectionToNextFindMatch",
+      "when": "vim.active && editorFocus && vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
+    },
+
+    // Go back to previous match (ctrl + p)
+    {
+      "key": "ctrl+p",
+      "command": "editor.action.moveSelectionToPreviousFindMatch",
+      "when": "vim.active && editorFocus && vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
+    },
+
+    // Select all matches (ctrl + a). This is effectively the same as (ctrl + shift + l)
+    {
+      "key": "ctrl+a",
+      "command": "editor.action.selectHighlights",
+      "when": "vim.active && editorFocus && vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualBlock' && !inDebugRepl"
+    }
+]
