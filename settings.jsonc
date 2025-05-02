@@ -1,0 +1,98 @@
+{
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.visualModeKeyBindings": [
+      {
+        "before": ["<leader>", "l"],
+        "after": ["$"],
+      },
+      {
+        "before": ["<leader>", "h"],
+        "after": ["0"],
+      },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "l"],
+        "after": ["$"],
+      },
+      {
+        "before": ["<leader>", "h"],
+        "after": ["0"],
+      },
+      // Tabs
+      {
+        "before": ["H"], // Focus previous tab at the left
+        "commands": ["workbench.action.previousEditor"]
+      },
+      {
+        "before": ["L"], // Focus next tab at the right
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["Q"], // Close current tab
+        "after": ["<C-w>", "q"]
+      },
+      // Splits
+      {
+        "before": ["|"], // Split tab vertically
+        "after": ["<C-w>", "v"]
+      },
+      {
+        "before": ["_"], // Split tab horizontally
+        "after": ["<C-w>", "s"]
+      },
+      {
+        "before": ["<C-h>"], // Focus split window at left
+        "commands": ["workbench.action.focusLeftGroup"]
+      },
+      {
+        "before": ["<C-j>"], // Focus split window at right
+        "commands": ["workbench.action.focusBelowGroup"]
+      },
+      {
+        "before": ["<C-k>"], // Focus split window at above
+        "commands": ["workbench.action.focusAboveGroup"]
+      },
+      {
+        "before": ["<C-l>"], // Focus split window at below
+        "commands": ["workbench.action.focusRightGroup"]
+      }, 
+      // Quick Search
+      {
+        "before": ["<leader>", "f"], // Search text
+        "commands": ["workbench.action.findInFiles"]
+      },
+      {
+        "before": ["<leader>", "s"], // Search symbol
+        "commands": ["workbench.action.showAllSymbols"]
+      },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false,
+      "<C-b>": false,
+      "<C-k>": false,
+    },
+    "keyboard.dispatch": "keyCode",
+    "workbench.colorTheme": "Gruvbox Dark Hard", 
+    "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": true,
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false
+} 
