@@ -1,16 +1,24 @@
 theme = "gruvbox_dark_hard"
 
 [editor]
-rulers = [80]
+rulers = [100]
 line-number = "relative"
-completion-timeout = 100
-bufferline = "multiple"
+clipboard-provider = "windows"
+cursorline = true
 insert-final-newline = false
+bufferline = "multiple"
+completion-timeout = 100
+
+[editor.lsp]
+display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.file-picker]
+hidden = false
 
 [editor.statusline]
 left = ["mode", "spinner"]
@@ -21,7 +29,23 @@ mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
+[editor.indent-guides]
+render = true
+
 [keys.normal]
 "A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 C-s = ":w"
+D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
+C-b = ":buffer-close"
+"|" = "vsplit"
+"_" = "hsplit"
+"Q" = ":q"
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
+
+[keys.normal."+"]
+r = ":sh odin run ."
+b = ":sh build.bat"
+d = ":sh task debug"
