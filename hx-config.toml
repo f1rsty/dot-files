@@ -2,11 +2,24 @@ theme = "gruvbox_dark_hard"
 
 [editor]
 rulers = [80]
+line-number = "relative"
+completion-timeout = 100
+bufferline = "multiple"
+insert-final-newline = false
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-base-name", "spacer", "total-line-numbers", "spacer", "version-control"]
+right = ["diagnostics", "selections", "position", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [keys.normal]
 "A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
